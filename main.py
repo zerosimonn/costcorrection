@@ -5,20 +5,16 @@ from settings import target_date, quote_date, format_pattern, inflation_df
 from datetime import datetime
 import pandas as pd 
 
-# Calculate time difference for 1 instance 
+# Adjust dateformats
 target_year = datetime.strptime(target_date, format_pattern).year
-quote_year = datetime.strptime(quote_date, format_pattern).year
-
-def delta_time(quote_date, target_date):
-    delta = quote_date - target_date
-    return delta
 
 # Calculate cumulative multiplier method 
 def calc_multiplier(start_year, target_year, inflation_df):
+    # if the cost is in or after target year, no adjustment needed
     if start_year >= target_year:
         return 1.0 
-    
-    mask = (inflation_df['year'] >= start_year) & (inflation_df['year'] < end_year)
+    # compound from start_year up to (but not including) target_year
+    mask = (inflation_df['year'] >= start_year) & (inflation_df['year'] < target_year)
     relevant_rates = inflation_df.loc[mask, 'rate']
     
     multiplier = (1 + relevant_rates).prod()
@@ -52,8 +48,9 @@ def main():
 
     # Display results or save to new file
     print(costs_df[['Date', 'Cost', 'Adjusted_Cost']].head())
-    costs_df.to_excel("Zlist_Adjusted.xlsx", index=False)
-    print("Success! Saved to Zlist_Adjusted.xlsx")
+    costs_df.to_csv("Zlist_Adjusted.csv", index=False)
+    #   For Excel: costs_df.to_excel("Zlist_Adjusted.xlsx", index=False)
+    print("Success! Saved to Zlist_Adjusted.csv")
 
 if __name__ == "__main__":
     main()
