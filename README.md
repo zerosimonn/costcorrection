@@ -8,8 +8,7 @@ Correct material cost to current quarter based on date when quote was received.
 
 Prerequisites
 To run this project, you'll need to have the following Python packages installed:
--
--
+
 You can install these packages using pip. 
 pip install -
 
