@@ -1,30 +1,45 @@
-Project background
-To improve the quality of life for people around the world, we manufacture customized machines. While each machine configuration is unique, it is comprised of frequently re-occurring parts. The costs of these parts increase over time due to inflation. It is not possible to request up-to-date pricing to our suppliers for all parts, so 
+## Project background
 
-This project aims to output a tool to estimate the current price. 
+To improve the quality of life for people around the world, we manufacture customized machines. While each machine configuration is unique, it is comprised of frequently re-occurring parts. The costs of these parts increase over time due to inflation. We need a tool to inflation-correct the material costs.
 
-What it does
-Correct material cost to current quarter based on date when quote was received. 
+## What it does
 
-Prerequisites
+Correct material cost to current quarter based on date when supplier quote was received. 
+
+### Prerequisites
+
 To run this project, you'll need to have the following Python packages installed:
+- pandas
+- datetime
+- dateutil 
+>(note that the package name is different from the importable name)
 
 You can install these packages using pip. 
-pip install -
+
+```pip install pandas, datetime, python-dateutil```
 
 How to clone it
-git clone https://github.com/zerosimon/costcorrection
+
+```git clone https://github.com/zerosimon/costcorrection```
 
 How to run it
-cd costcorrection
+
+```
+cd costcorrection 
 ./main.py
+```
 
 Run the tests
-./test.py
 
-Constributing
+```./test.py ```
+
+---
+### Constributing
+
 If there are features that you would like to see added, feel free to add an issue here, or create a pull request implementing that feature!
 
-Definitions
+### Definitions
+
 Costs = the cost of material for manufacturing organization point of view
+
 Price = the price of the material for supplier point of view
