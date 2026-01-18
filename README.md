@@ -5,6 +5,7 @@ To improve the quality of life for people around the world, we manufacture custo
 ## What it does
 
 Correct material cost to current quarter based on date when supplier quote was received. 
+Compound interest from quote date up to (but not including) your target year. Forward inflation for current year not done.
 
 ### Prerequisites
 
@@ -12,11 +13,12 @@ To run this project, you'll need to have the following Python packages installed
 - pandas
 - datetime
 - dateutil 
+- openpyxl
 >(note that the package name is different from the importable name)
 
 You can install these packages using pip. 
 
-```pip install pandas, datetime, python-dateutil```
+```pip install pandas, datetime, python-dateutil, openpyxl```
 
 How to clone it
 
@@ -31,7 +33,7 @@ cd costcorrection
 
 Run the tests
 
-```./test.py ```
+```./tests.py ```
 
 ---
 ### Constributing
