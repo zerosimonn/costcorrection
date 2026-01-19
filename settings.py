@@ -2,9 +2,9 @@ import pandas as pd
 
 # File with values/ factors/ etc.
 format_pattern = "%Y-%m-%d"
-inflation_rate = 1.2
 target_date = "2026-01-01"
 quote_date = "2024-01-01"
+filename = "Zlist.csv"  # or ".xlsx"
 
 inflation_df = pd.DataFrame({
     'year': [2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026],
