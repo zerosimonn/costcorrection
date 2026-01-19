@@ -1,11 +1,10 @@
 ## Project background
 
-To improve the quality of life for people around the world, we manufacture customized machines. While each machine configuration is unique, it is comprised of frequently re-occurring parts. The costs of these parts increase over time due to inflation. We need a tool to inflation-correct the material costs.
-
+We manufacture customised machines using a database of thousands of frequently re-occuring parts. 
+The costs of these parts increase over time due to inflation. We need a tool to inflation-correct the many material costs to be able to make accurate cost estimations for future new machines. 
 ## What it does
 
-Correct material cost to current quarter based on date when supplier quote was received. 
-Compound interest from quote date up to (but not including) your target year. Forward inflation for current year not done.
+Correct (inflate) part costs in .csv or .xlsx file to the current calendar year using cumulative interest since the last known supplier quotation date. Note including current year and not including forward inflation. 
 
 ### Prerequisites
 
@@ -14,27 +13,31 @@ To run this project, you'll need to have the following Python packages installed
 - datetime
 - dateutil 
 - openpyxl
->(note that the package name is different from the importable name)
+- unittest
+- os
+>_note: the package name can be different from the importable name, see below_
 
 You can install these packages using pip. 
 
-```pip install pandas, datetime, python-dateutil, openpyxl```
+```
+pip install pandas, datetime, python-dateutil, openpyxl, unittest, os
+```
 
-How to clone it
+You need to have your .csv or .xlsx file formatted as  'Material';'Date';'Cost'
 
-```git clone https://github.com/zerosimon/costcorrection```
+### How to clone it
 
-How to run it
+```
+git clone https://github.com/zerosimon/costcorrection
+```
+
+### How to run it
 
 ```
 cd costcorrection 
+./tests.py
 ./main.py
 ```
-
-Run the tests
-
-```./tests.py ```
-
 ---
 ### Constributing
 

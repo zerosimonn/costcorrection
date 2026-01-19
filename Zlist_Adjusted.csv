@@ -1,3 +1,5 @@
-Date,Cost,start_year,multiplier,Adjusted_Cost
-2024-01-01,120,2024,1.05575,126.69
-2025-10-01,105,2025,1.025,107.62
+Material;Date;Cost;start_year;multiplier;Adjusted_Cost
+First;2024-01-01;120;2024;1.05575;126.69
+Second;2025-10-01;105;2025;1.025;107.62
+Third;2019-10-01;105;2019;1.2729172373124369;133.66
+Fourth;2026-10-01;105;2026;1.0;105.0
