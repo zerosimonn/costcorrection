@@ -1,0 +1,6 @@
+Material;Date;Cost
+First;2019-01-01;100
+Second;2019-10-01;100
+Third;2023-05-01;100
+Fourth;2026-01-01;100
+Fifth;2026-06-01;100
