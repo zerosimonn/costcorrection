@@ -37,8 +37,8 @@ git clone https://github.com/zerosimon/costcorrection
 
 ```
 cd costcorrection 
-./tests.py
-./main.py
+python3 ./tests.py
+python3 ./main.py
 ```
 
 ---
