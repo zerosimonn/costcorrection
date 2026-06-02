@@ -26,6 +26,7 @@ pip install pandas python-dateutil, openpyxl
 ```
 
 You need to have your .csv or .xlsx file formatted as  'Material';'Date';'Cost'
+This solution uses Pandas, so use your date with headers. Note the date formatting in either Pandas settings or Excel "Home > Numer > More Number Formats".
 
 ### How to clone it
 
@@ -40,6 +41,7 @@ cd costcorrection
 python3 ./tests.py
 python3 ./main.py
 ```
+Run using preview (only for small data set) using: SHOW_PREVIEW in settings.py file.
 
 ---
 

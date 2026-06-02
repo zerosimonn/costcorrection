@@ -12,6 +12,7 @@ inflation_df = pd.DataFrame({
 
 SHOW_PREVIEW = False  # set to False for big data runs
 
+# Code abbreviations for date formatting:
 #   Code	Meaning	            Example
 #   %Y	    4-digit Year	    2024
 #   %y	    2-digit Year	    24

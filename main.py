@@ -110,6 +110,9 @@ def main():
     # process data
     print(f"Processing input data for target {target_year}...")
 
+    print("Available columns:", costs_df.columns.tolist())
+    costs_df['Date'] = pd.to_datetime(costs_df['Date']) 
+
     # Convert 'Date' column to datetime objects and extract the year
     costs_df['Date'] = pd.to_datetime(costs_df['Date'])
     costs_df['multiplier'] = costs_df['Date'].apply(
