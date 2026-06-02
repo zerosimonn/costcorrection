@@ -26,7 +26,7 @@ pip install pandas python-dateutil, openpyxl
 ```
 
 You need to have your .csv or .xlsx file formatted as  'Material';'Date';'Cost'
-This solution uses Pandas, so use your date with headers. Note the date formatting in either Pandas settings or Excel "Home > Numer > More Number Formats".
+This solution uses Pandas, so use your date with headers. Note the date formatting in either Pandas settings or Excel "Home > Numer > More Number Formats". Refer to the .txt files for an example. 
 
 ### How to clone it
 

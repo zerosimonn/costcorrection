@@ -28,4 +28,7 @@ venv
 
 # Project files
 .csv
+**/*.csv
+Zlist.csv
+Zlist_Adjusted.csv
 data/
